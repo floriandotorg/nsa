@@ -13,7 +13,7 @@ const validPassword = 'geliebtehilde'
 
 const login = () => {
 	if (username === validUsername && password === validPassword) {
-		return goto('/main')
+		return goto('/db')
 	}
 
 	errorMessage = 'Diese Zugangsdaten sind nicht korrekt'
