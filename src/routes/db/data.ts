@@ -1,8 +1,14 @@
+type CommonData = {
+	id: string
+	datetime: Date
+	name: string
+	keywords: string[]
+	priority: number
+}
+
 export const data: Array<
-	| {
+	| (CommonData & {
 			type: 'email'
-			keywords: string[]
-			priority: number
 			thread: [
 				{
 					sender: string
@@ -10,22 +16,21 @@ export const data: Array<
 					body: string
 				},
 			]
-	  }
-	| {
+	  })
+	| (CommonData & {
 			type: 'audio'
-			keywords: string[]
-			priority: number
 			durationSeconds: number
-	  }
-	| {
+	  })
+	| (CommonData & {
 			type: 'document'
-			keywords: string[]
-			priority: number
 			filename: string
-	  }
+	  })
 > = [
 	{
 		type: 'document',
+		id: '1',
+		datetime: new Date('2024-01-01 12:00:00'),
+		name: 'test',
 		keywords: ['testtest'],
 		priority: 1,
 		filename: 'test.pdf',

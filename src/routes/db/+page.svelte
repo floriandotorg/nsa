@@ -1,5 +1,6 @@
 <script lang="ts">
 import { onMount } from 'svelte'
+import { Mail, FileAudio, FileText } from 'lucide-svelte'
 import { data } from './data'
 import Popup from './Popup.svelte'
 
@@ -40,6 +41,22 @@ const searchDatabase = async () => {
 		errorMessage = 'Es konnten keine Ergebnisse gefunden werden.'
 	}
 	loading = false
+}
+
+const typeToIcon: {
+	[key in (typeof data)[number]['type']]: typeof Mail | typeof FileAudio | typeof FileText
+} = {
+	email: Mail,
+	audio: FileAudio,
+	document: FileText,
+}
+
+const typeToText: {
+	[key in (typeof data)[number]['type']]: string
+} = {
+	email: 'E-Mail',
+	audio: 'Audio',
+	document: 'Dokument',
 }
 </script>
 
@@ -84,9 +101,37 @@ const searchDatabase = async () => {
     {/if}
 
     {#if results.length}
-      <ul>
+      <ul class="grid gap-4 w-full max-w-4xl mt-8">
         {#each results as result}
-          <li>{result.type} - Priority: {result.priority}</li>
+          {@const Icon = typeToIcon[result.type]}
+          <li>
+            <a 
+              href={`/db/${result.id}`}
+              class="block p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary transition-all duration-200"
+            >
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                  <span class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/15 text-primary flex items-center gap-2">
+                    <Icon class="w-4 h-4" />
+                    {typeToText[result.type]}
+                  </span>
+                  <time class="text-sm text-muted-foreground">
+                    {result.datetime.toLocaleDateString('de-DE', {
+                      day: '2-digit',
+                      month: '2-digit',
+                      year: 'numeric'
+                    })}
+                  </time>
+                </div>
+                <div class="flex items-center justify-between">
+                  <h3 class="text-2xl font-medium text-foreground">
+                    {result.name}
+                  </h3>
+                  <span class="text-primary text-sm font-medium">Anzeigen →</span>
+                </div>
+              </div>
+            </a>
+          </li>
         {/each}
       </ul>
     {/if}
