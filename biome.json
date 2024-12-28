@@ -1,0 +1,31 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "extends": ["./biome-base.json"],
+  "files": {
+    "ignore": ["functions/**/*", "schema/**/*", "cron/**/*", "shopify-app/**/*"]
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["warn", "error"]
+          }
+        }
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": ["*.svelte"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off"
+          }
+        }
+      }
+    }
+  ]
+}
