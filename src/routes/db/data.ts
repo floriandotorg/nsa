@@ -23,4 +23,11 @@ export const data: Array<
 			priority: number
 			filename: string
 	  }
-> = []
+> = [
+	{
+		type: 'document',
+		keywords: ['testtest'],
+		priority: 1,
+		filename: 'test.pdf',
+	},
+]

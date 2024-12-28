@@ -29,7 +29,7 @@ const searchDatabase = async () => {
 	}
 	errorMessage = ''
 	loading = true
-	await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
+	// await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
 	const filteredResults = data
 		.filter(item => item.keywords.some(keyword => inputValue.includes(keyword)))
 		.sort((a, b) => b.priority - a.priority)
