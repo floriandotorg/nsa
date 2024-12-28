@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
 import { onMount } from 'svelte'
+import { data } from './data'
+
 let inputValue = $state('')
 let showModal = $state(false)
 let neverShowAgain = $state(false)
+let results = $state<typeof data>([])
+let loading = $state(false)
+let errorMessage = $state('')
 
 onMount(() => {
 	if (!localStorage.getItem('neverShowPopup')) {
@@ -15,6 +20,25 @@ const closePopup = () => {
 		localStorage.setItem('neverShowPopup', 'true')
 	}
 	showModal = false
+}
+
+const searchDatabase = async () => {
+	if (inputValue.length < 5) {
+		errorMessage = 'Bitte geben Sie mindestens 5 Zeichen ein.'
+		return
+	}
+	errorMessage = ''
+	loading = true
+	await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
+	const filteredResults = data
+		.filter(item => item.keywords.some(keyword => inputValue.includes(keyword)))
+		.sort((a, b) => b.priority - a.priority)
+		.slice(0, 3)
+	results = filteredResults.length ? filteredResults : []
+	if (!results.length) {
+		errorMessage = 'Es konnten keine Ergebnisse gefunden werden.'
+	}
+	loading = false
 }
 </script>
 
@@ -48,11 +72,11 @@ const closePopup = () => {
       <p class="text-lg text-foreground">
         Durchsuchen Sie unsere umfassende Datenbank nach Personen von Interesse, Aktivitäten und Verbindungen. 
         Unser fortschrittliches System ermöglicht präzise Abfragen in Echtzeit.<br>
-        <strong class="font-semibold">Nur für den Dienstgebrauch.</strong>
+        <strong class="font-medium">Nur für den Dienstgebrauch.</strong>
       </p>
     </div>
 
-    <form class="flex gap-4 w-full max-w-4xl">
+    <form class="flex gap-4 w-full max-w-4xl" onsubmit={searchDatabase}>
       <input 
         type="text" 
         bind:value={inputValue}
@@ -66,5 +90,23 @@ const closePopup = () => {
         Suchen
       </button>
     </form>
+
+    {#if loading}
+      <div class="flex justify-center items-center mt-16">
+        <div class="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
+      </div>
+    {/if}
+
+    {#if errorMessage}
+      <p class="text-red-500 mt-8">{errorMessage}</p>
+    {/if}
+
+    {#if results.length}
+      <ul>
+        {#each results as result}
+          <li>{result.type} - Priority: {result.priority}</li>
+        {/each}
+      </ul>
+    {/if}
   </div>
 </div>
