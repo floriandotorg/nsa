@@ -5,24 +5,9 @@ import { data } from '$lib/data'
 import Popup from './Popup.svelte'
 
 let inputValue = $state('')
-let showModal = $state(false)
-let neverShowAgain = $state(false)
 let results = $state<typeof data>([])
 let loading = $state(false)
 let errorMessage = $state('')
-
-onMount(() => {
-	if (!localStorage.getItem('neverShowPopup')) {
-		showModal = true
-	}
-})
-
-const closePopup = () => {
-	if (neverShowAgain) {
-		localStorage.setItem('neverShowPopup', 'true')
-	}
-	showModal = false
-}
 
 const searchDatabase = async () => {
 	if (inputValue.length < 5) {
@@ -32,11 +17,7 @@ const searchDatabase = async () => {
 	errorMessage = ''
 	loading = true
 	// await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
-	const filteredResults = data
-		.filter(item => item.keywords.includes(inputValue.toLowerCase()))
-		.sort((a, b) => b.priority - a.priority)
-		.slice(0, 3)
-	results = filteredResults.length ? filteredResults : []
+	results = data.filter(item => item.keywords.includes(inputValue.toLowerCase())).sort((a, b) => b.priority - a.priority)
 	if (!results.length) {
 		errorMessage = 'Es konnten keine Ergebnisse gefunden werden.'
 	}
@@ -101,8 +82,9 @@ const typeToText: {
     {/if}
 
     {#if results.length}
+      {@const additionalResults = Math.max(0, results.length - 3)}
       <ul class="grid gap-4 w-full max-w-4xl mt-8">
-        {#each results as result}
+        {#each results.slice(0, 3) as result (result.id)}
           {@const Icon = typeToIcon[result.type]}
           <li>
             <a 
@@ -134,6 +116,9 @@ const typeToText: {
             </a>
           </li>
         {/each}
+        <li class="text-center text-muted-foreground">
+          {additionalResults} weitere{additionalResults == 1 ? 's' : ''} Ergebnis{additionalResults == 1 ? '' : 'se'} gefunden.
+        </li>
       </ul>
     {/if}
   </div>
