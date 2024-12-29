@@ -33,7 +33,7 @@ const searchDatabase = async () => {
 	loading = true
 	// await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
 	const filteredResults = data
-		.filter(item => item.keywords.some(keyword => inputValue.includes(keyword)))
+		.filter(item => item.keywords.includes(inputValue.toLowerCase()))
 		.sort((a, b) => b.priority - a.priority)
 		.slice(0, 3)
 	results = filteredResults.length ? filteredResults : []
@@ -107,6 +107,7 @@ const typeToText: {
           <li>
             <a 
               href={`/db/${result.id}`}
+              target="_blank"
               class="block p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary transition-all duration-200"
             >
               <div class="flex flex-col gap-3">
