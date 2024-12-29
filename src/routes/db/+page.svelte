@@ -16,7 +16,9 @@ const searchDatabase = async () => {
 	}
 	errorMessage = ''
 	loading = true
-	// await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
+	if (window.location.hostname !== 'localhost') {
+		await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
+	}
 	results = data.filter(item => item.keywords.includes(inputValue.toLowerCase())).sort((a, b) => b.priority - a.priority)
 	if (!results.length) {
 		errorMessage = 'Es konnten keine Ergebnisse gefunden werden.'
