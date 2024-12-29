@@ -99,6 +99,9 @@ const typeToText: {
                   <span class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/15 text-primary flex items-center gap-2">
                     <Icon class="w-4 h-4" />
                     {typeToText[result.type]}
+                    {#if result.type === 'audio'}
+                      ({Math.floor(result.durationSeconds / 60)}:{(result.durationSeconds % 60).toString().padStart(2, '0')})
+                    {/if}
                   </span>
                   <time class="text-sm text-muted-foreground">
                     {result.datetime.toLocaleDateString('de-DE', {

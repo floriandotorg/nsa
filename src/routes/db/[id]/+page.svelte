@@ -1,9 +1,18 @@
 <script lang="ts">
+import { goto } from '$app/navigation'
 import { data } from '$lib/data'
 
 const { data: pageData } = $props()
 
 const doc = $derived(data.find(item => item.id === pageData.id))
+
+$effect(() => {
+	if (doc?.type === 'document') {
+		goto(`/${doc.id}.${doc.filetype}`)
+	} else if (doc?.type === 'audio') {
+		goto(`/${doc.id}.mp3`)
+	}
+})
 </script>
 
 {#if doc != null}
