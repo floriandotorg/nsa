@@ -1,8 +1,8 @@
 <script lang="ts">
-import { onMount } from 'svelte'
 import { Mail, FileAudio, FileText } from 'lucide-svelte'
 import { data } from '$lib/data'
 import Popup from './Popup.svelte'
+import { isRead, markAsRead } from '$lib/read.svelte'
 
 let inputValue = $state('')
 let results = $state<typeof data>([])
@@ -89,27 +89,34 @@ const typeToText: {
         {#each results.slice(0, 3) as result (result.id)}
           {@const Icon = typeToIcon[result.type]}
           <li>
-            <a 
-              href={`/db/${result.id}`}
-              target="_blank"
-              class="block p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary transition-all duration-200"
+            <button 
+              onclick={() => {
+                markAsRead(result.id)
+                window.open(`/db/${result.id}`, '_blank')
+              }}
+              class="block p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary transition-all duration-200 w-full {isRead(result.id) ? 'opacity-50' : ''}"
             >
               <div class="flex flex-col gap-3">
-                <div class="flex items-center gap-3">
-                  <span class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/15 text-primary flex items-center gap-2">
-                    <Icon class="w-4 h-4" />
-                    {typeToText[result.type]}
-                    {#if result.type === 'audio'}
-                      ({Math.floor(result.durationSeconds / 60)}:{(result.durationSeconds % 60).toString().padStart(2, '0')})
-                    {/if}
-                  </span>
-                  <time class="text-sm text-muted-foreground">
-                    {result.datetime.toLocaleDateString('de-DE', {
-                      day: '2-digit',
-                      month: '2-digit',
-                      year: 'numeric'
-                    })}
-                  </time>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/15 text-primary flex items-center gap-2">
+                      <Icon class="w-4 h-4" />
+                      {typeToText[result.type]}
+                      {#if result.type === 'audio'}
+                        ({Math.floor(result.durationSeconds / 60)}:{(result.durationSeconds % 60).toString().padStart(2, '0')})
+                      {/if}
+                    </span>
+                    <time class="text-sm text-muted-foreground">
+                      {result.datetime.toLocaleDateString('de-DE', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric'
+                      })}
+                    </time>
+                  </div>
+                  {#if isRead(result.id)}
+                    <span class="text-sm text-muted-foreground">Gelesen</span>
+                  {/if}
                 </div>
                 <div class="flex items-center justify-between">
                   <h3 class="text-2xl font-medium text-foreground">
@@ -118,7 +125,7 @@ const typeToText: {
                   <span class="text-primary text-sm font-medium">Anzeigen →</span>
                 </div>
               </div>
-            </a>
+            </button>
           </li>
         {/each}
         <li class="text-center text-muted-foreground">
