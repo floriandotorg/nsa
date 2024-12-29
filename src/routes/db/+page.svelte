@@ -1,7 +1,7 @@
 <script lang="ts">
 import { onMount } from 'svelte'
 import { Mail, FileAudio, FileText } from 'lucide-svelte'
-import { data } from './data'
+import { data } from '$lib/data'
 import Popup from './Popup.svelte'
 
 let inputValue = $state('')
