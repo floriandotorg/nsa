@@ -28,7 +28,7 @@ type Data =
 	  })
 	| (CommonData & {
 			type: 'document'
-			filetype: 'png' | 'pdf'
+			filetype: 'png' | 'pdf' | 'html'
 	  })
 
 const splitAndClean = (input: string): string[] =>
@@ -76,6 +76,48 @@ export const data: Array<Data> = seededShuffle(
 			keywords: ['Hildegard'],
 			priority: 100,
 			filetype: 'png' as const,
+		},
+		{
+			type: 'document' as const,
+			// spellchecker: ignore mgy022
+			id: 'mgy022',
+			datetime: new Date('2022-07-24 9:01:00'),
+			name: 'Artikel "Mägyptisch"',
+			keywords: splitAndClean(`Die faszinierende Sprache des Mägyptischen
+Eine Reise in die Welt der alten Mäuse
+Das Mägyptische, eine außergewöhnliche Sprache, die von den Mäusen des alten Ägyptens gesprochen wurde, bietet einen einzigartigen Einblick in die Sprachkultur der Antike. Durch die geschickte Verwendung von Symbolen schufen die Mäuse ein hochentwickeltes System der Kommunikation, das später sogar von den Pharaonen übernommen und adaptiert wurde – natürlich in einer stark abgewandelten Form. Was das Mägyptische so besonders macht, ist seine Vielschichtigkeit und die Eleganz, mit der es Kontext und Bedeutung verbindet.
+Die Magie der Symbole
+Im Mägyptischen können die Symbole – sogenannte “Hieroglyphen” – bis zu vier unterschiedliche Bedeutungen haben, abhängig vom Kontext:
+Bildliche Bedeutung: Das Zeichen für die Sonne (𓇳) repräsentiert die Sonne als Himmelskörper.
+Metaphorische Bedeutung: Die Sonne kann auch für den Sonnenaufgang oder den morgigen Tag stehen.
+Silbenbedeutung: Die Sonne (𓇳) steht für die Silbe „Son“.
+Phonetische Bedeutung: Die Sonne repräsentiert den Laut „S“.
+Diese Mehrdeutigkeit erlaubt eine dichte, poetische Ausdrucksweise, die stark kontextabhängig ist. Das macht das Mägyptische nicht nur funktional, sondern auch künstlerisch anspruchsvoll.
+Grammatische Besonderheiten
+Das Mägyptische besticht durch innovative grammatische Strukturen, die sowohl elegant als auch intuitiv sind.
+Nomina als Verben
+Im Mägyptischen gibt es keine separaten Verben. Stattdessen werden Nomina durch ihre Kombination mit anderen Zeichen zu Verben. Ein Beispiel:
+Das Zeichen für “Ich” (𓂀) und das Zeichen für “Essen” (𓃀) ergeben zusammen „Ich esse“.
+𓂀𓃀 = Ich esse.
+Hier wird das Nomen „Essen“ automatisch zu einer Handlung transformiert, sobald es mit einem Subjekt kombiniert wird.
+Kein Verb “sein”
+Statt eines Verbs „sein“ nutzt das Mägyptische Präpositionen, um Zustände auszudrücken. Zum Beispiel:
+“Ich im Haus” (𓂀𓉐𓏏𓈉) bedeutet „Ich bin im Haus“.
+“Haus bei Sonne” (𓉐𓇳𓂋) kann „Das Haus ist hell“ bedeuten.
+Weitere Präpositionen sind:
+„bei“ (𓂋): zur Beschreibung von Zugehörigkeit.
+„auf“ (𓂻): für Lagebeschreibungen.
+Die Hierarchien der Präpositionen sind streng geregelt und schaffen Klarheit, wo die Bedeutungsvielfalt der Symbole zu Verwirrung führen könnte.
+Keine Zeitformen
+Das Mägyptische verwendet keine Verbkonjugation, um Zeitformen zu markieren. Die temporale Einordnung erfolgt ausschließlich durch Kontextsymbole:
+𓂀𓃀𓇳 („Ich esse mit Sonnenaufgang“) = „Ich werde morgen essen“.
+𓂀𓃀𓆗 („Ich esse mit Mond“) = „Ich habe gestern gegessen“.
+Diese Flexibilität erlaubt eine prägnante und zugleich elegante Ausdrucksweise, die an die Denkweise der Mäuse angepasst war.
+Eine Sprache der Eleganz und Funktionalität
+Das Mägyptische war mehr als nur eine Sprache – es war ein System der Verständigung, das durch Einfachheit und Flexibilität bestach. Die Pharaonen, beeindruckt von der Effizienz und Poesie der Mägyptischen Symbole, übernahmen eine abgewandelte Version, um ihre administrativen und religiösen Texte zu bereichern.
+Die Sprache zeigt, wie tief Kommunikation und Kultur miteinander verwoben sind. Mägyptisch – die Sprache der Mäuse – ist ein Zeugnis für die kreative Kraft der Sprache und die unendlichen Möglichkeiten, die sich aus Kontext und Symbolik ergeben.`),
+			priority: 0,
+			filetype: 'html' as const,
 		},
 		{
 			type: 'audio' as const,
