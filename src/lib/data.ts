@@ -78,6 +78,34 @@ export const data: Array<Data> = seededShuffle(
 			filetype: 'png' as const,
 		},
 		{
+			type: 'audio' as const,
+			// spellchecker: ignore pmmmhmw12
+			id: 'pmmmhmw12',
+			durationSeconds: 56,
+			datetime: new Date('2024-12-05 08:23:00'),
+			name: 'Observation P. Maus',
+			keywords: splitAndClean(`Bist du sicher, dass wir hier ungestört sind? Ich will nicht, dass eine von diesen Kontrollmäusen uns belauscht.
+
+Keine Sorge, ich hab alles geprüft. Hier hört niemand zu.
+
+Gut. Also… was machen wir jetzt? Die Petition – gestoppt! Einfach so!
+
+Diese verdammte Hildegard! Das war so klar! Immer die gleiche Nummer: Alles abwürgen, sobald es unbequem wird. Glaubt sie wirklich, sie kann den Verband wie ihren persönlichen Spielplatz behandeln?
+
+Sie hat jedenfalls wieder gezeigt, wer hier das Sagen hat…
+
+Das Sagen? Ha! Nicht mehr lange! Dieses Machtgehabe hat bald ein Ende, monica. Hildegard muss weg.
+
+Und wie willst du das anstellen?
+
+Ich hab da eine Idee. Eine, die sie endgültig aus dem Spiel nimmt.
+
+Was meinst du—
+
+Nicht hier, nicht jetzt. Ich sage dir Bescheid, wenn es soweit ist.`),
+			priority: 50,
+		},
+		{
 			type: 'document' as const,
 			// spellchecker: ignore mgy022
 			id: 'mgy022',
@@ -144,7 +172,7 @@ Gut. Das Ziel ist, den Verband zu retten – für uns alle. Und vergiss nicht: D
 
 Und dann wirst du Vorsitzende. Und ich Vorstand Familien.
 
-Wir werden sehen. Erstmal Schritt für Schritt, Monika.`),
+Wir werden sehen. Erstmal Schritt für Schritt, monica.`),
 			priority: 100,
 		},
 		threadToEmail(
