@@ -73,7 +73,7 @@ export const data: Array<Data> = seededShuffle(
 			id: 'hmpolg01',
 			datetime: new Date('2024-11-28 12:00:00'),
 			name: 'Photo H. Maus',
-			keywords: ['Hildegard'],
+			keywords: ['Hildegard', 'photo', 'hausmäuse', 'verband', 'hausmaus'],
 			priority: 100,
 			filetype: 'png' as const,
 		},
@@ -106,6 +106,28 @@ export const data: Array<Data> = seededShuffle(
 			keywords: ['petra', 'monica'],
 			priority: 100,
 			filetype: 'png' as const,
+		},
+		{
+			type: 'audio' as const,
+			// spellchecker: ignore pkehmlm533
+			id: 'pkehmlm533',
+			durationSeconds: 93,
+			datetime: new Date('2024-12-20 07:11:00'),
+			name: 'PK E.Maus',
+			keywords: splitAndClean(`Ruhe bitte, meine Damen und Herren. Danke. Guten Abend. Ich bin Erwin Hubertus, der Leiter des Verbands Deutscher Hausmäuse e.V.
+
+Ich habe heute eine bedauerliche Mitteilung zu machen. Es fällt mir nicht leicht, das zu sagen, aber ich muss die Gerüchte bestätigen: Hildegard Maus ist leider ernsthaft erkrankt.
+
+Zum jetzigen Zeitpunkt kann ich jedoch keine weiteren Angaben zur Art der Erkrankung machen. Wir bitten hier um Verständnis und auch darum, die Privatsphäre von Frau Maus zu respektieren.
+
+Ich möchte jetzt die Gelegenheit geben, Fragen zu stellen.
+
+Herr Hubertus, Lena Maus von "Hausmaus aktuell". Können Sie uns sagen, was das für die anstehende Hausmauswahl bedeutet?
+
+Vielen Dank für Ihre Frage, Frau Maus. Die Hausmauswahl wird aufgrund der aktuellen Situation auf unbestimmte Zeit verschoben. Wir sind uns bewusst, wie wichtig dieses Ereignis für unsere Gemeinschaft ist, aber unter den gegebenen Umständen ist es das Beste, zunächst die Situation zu klären.
+
+Ich danke Ihnen allen für Ihre Aufmerksamkeit. Weitere Fragen bitte schriftlich an unser Büro. Vielen Dank.`),
+			priority: 100,
 		},
 		{
 			type: 'audio' as const,
