@@ -12,6 +12,7 @@ let errorMessage = $state('')
 const searchDatabase = async () => {
 	if (inputValue.length < 5) {
 		errorMessage = 'Bitte geben Sie mindestens 5 Zeichen ein.'
+		results = []
 		return
 	}
 	errorMessage = ''
@@ -88,7 +89,7 @@ const typeToText: {
       <ul class="grid gap-4 w-full max-w-4xl mt-8">
         {#each results.slice(0, 3) as result (result.id)}
           {@const Icon = typeToIcon[result.type]}
-          <li>
+          <li class="w-full">
             <button 
               onclick={() => {
                 markAsRead(result.id)
@@ -97,7 +98,7 @@ const typeToText: {
               class="block p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary transition-all duration-200 w-full {isRead(result.id) ? 'opacity-50' : ''}"
             >
               <div class="flex flex-col gap-3">
-                <div class="flex items-start justify-between">
+                <div class="flex items-center justify-between">
                   <div class="flex items-center gap-3">
                     <span class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/15 text-primary flex items-center gap-2">
                       <Icon class="w-4 h-4" />
