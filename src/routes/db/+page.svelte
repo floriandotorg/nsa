@@ -98,7 +98,7 @@ const typeToText: {
               class="block p-6 bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary transition-all duration-200 w-full {isRead(result.id) ? 'opacity-50' : ''}"
             >
               <div class="flex flex-col gap-3">
-                <div class="flex items-center justify-between">
+                <div class="flex justify-between">
                   <div class="flex items-center gap-3">
                     <span class="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/15 text-primary flex items-center gap-2">
                       <Icon class="w-4 h-4" />
@@ -116,7 +116,9 @@ const typeToText: {
                     </time>
                   </div>
                   {#if isRead(result.id)}
-                    <span class="text-sm text-muted-foreground">Gelesen</span>
+                    <div class="h-full flex items-start">
+                      <span class="text-sm text-muted-foreground">Gelesen</span>
+                    </div>
                   {/if}
                 </div>
                 <div class="flex items-center justify-between">
