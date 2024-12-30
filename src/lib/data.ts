@@ -108,6 +108,16 @@ export const data: Array<Data> = seededShuffle(
 			filetype: 'png' as const,
 		},
 		{
+			type: 'document' as const,
+			// spellchecker: ignore hmalni33
+			id: 'hmalni33',
+			datetime: new Date('2023-09-29 12:00:00'),
+			name: 'Artikel "Hausmaus aktuell"',
+			keywords: ['lena', 'presse', 'artikel', 'hausmaus', 'magazin'],
+			priority: 100,
+			filetype: 'pdf' as const,
+		},
+		{
 			type: 'audio' as const,
 			// spellchecker: ignore pkehmlm533
 			id: 'pkehmlm533',

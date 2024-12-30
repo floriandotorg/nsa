@@ -11,8 +11,8 @@ let errorMessage = $state('')
 
 const searchDatabase = async () => {
 	const searchTerm = inputValue.toLowerCase().trim()
-	if (searchTerm.length < 5) {
-		errorMessage = 'Bitte geben Sie mindestens 5 Zeichen ein.'
+	if (searchTerm.length < 4) {
+		errorMessage = 'Bitte geben Sie mindestens 4 Zeichen ein.'
 		results = []
 		return
 	}
