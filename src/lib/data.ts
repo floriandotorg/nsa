@@ -106,6 +106,16 @@ Nicht hier, nicht jetzt. Ich sage dir Bescheid, wenn es soweit ist.`),
 			priority: 50,
 		},
 		{
+			type: 'audio' as const,
+			// spellchecker: ignore hmtelf993
+			id: 'hmtelf993',
+			durationSeconds: 16,
+			datetime: new Date('2024-12-20 21:01:00'),
+			name: 'Observation H. Maus',
+			keywords: splitAndClean('Alter Freund... hör zu, ich kann nicht lange reden. Ich hinterlasse dir eine Nachricht am Haus meiner ersten Menschenfamilie. Ja, mir geht es gut. Mach dir keine Sorgen. Wir hören uns. Hildegard'),
+			priority: 50,
+		},
+		{
 			type: 'document' as const,
 			// spellchecker: ignore mgy022
 			id: 'mgy022',
@@ -377,6 +387,74 @@ Unsere Rezeption ist rund um die Uhr besetzt, um Ihnen jederzeit weiterzuhelfen.
 Mit mäusischen Grüßen,
 Thomas Maus
 Hotel Mäuseblick Nürnberg`,
+				},
+			],
+		),
+		threadToEmail(
+			{
+				// spellchecker: ignore ptsush04
+				id: 'ptsush04',
+				datetime: new Date('2024-12-15 07:04:58'),
+				name: 'Telekommunikationsüberwachung H. Maus',
+				priority: 0,
+			},
+			[
+				{
+					sender: 'hildegard.maus@vdh.de',
+					recipients: ['Verteiler Aktive Hausmäuse <Verband Deutscher Hausmäuse e.V.>'],
+					subject: 'Wichtige Mitteilung des Verbands',
+					body: `Sehr geehrte Hausmäuse,
+
+ich wende mich heute mit einer wichtigen Mitteilung an euch. Nach gründlichen Ermittlungen wurde beschlossen, Petra Maus für eine Dauer von 18 Monaten als Hausmaus zu suspendieren.
+
+Dieser Schritt erfolgt aufgrund schwerwiegender Anschuldigungen und des Verdachts eines konspirativen Vorgehens gegen den Verband Deutscher Hausmäuse e.V. Wir nehmen solche Vorwürfe sehr ernst, da sie nicht nur das Ansehen unseres Verbandes, sondern auch die Werte und Grundsätze, für die wir stehen, gefährden.
+
+Mein besonderer Dank gilt der Nagerischen Sicherheitsagentur für ihre herausragende Arbeit bei der Aufklärung dieses Falles. Ihr Einsatz war von unschätzbarem Wert, um Transparenz und Integrität in unserem Verband zu wahren.
+
+Lasst uns in diesen Zeiten besonders darauf achten, die Gemeinschaft zu stärken und unseren gemeinsamen Auftrag, die Unterstützung unserer Familien, weiterhin mit vollem Einsatz zu erfüllen.
+
+Mit nagerischen Grüßen,
+Hildegard Maus
+Stellvertretende Vorsitzende
+Verband Deutscher Hausmäuse e.V.`,
+				},
+			],
+		),
+		threadToEmail(
+			{
+				// spellchecker: ignore ehmvdhnsaa
+				id: 'ehmvdhnsaa',
+				datetime: new Date('2024-01-30 07:23:58'),
+				name: 'Telekommunikationsüberwachung E. Maus',
+				priority: 0,
+			},
+			[
+				{
+					sender: 'erwin.hubertus.maus@vdh.de',
+					recipients: ['Verteiler Hausmäuse <Verband Deutscher Hausmäuse e.V.>'],
+					subject: 'Ein Vorbild für uns alle',
+					body: `Liebe Hausmäuse,
+
+ich möchte die Gelegenheit nutzen, um heute eine besondere Maus in den Mittelpunkt zu stellen: Hildegard Maus. Ihre unermüdliche Arbeit und ihr außergewöhnliches Engagement rund um den kürzlichen Skandal verdienen unseren höchsten Respekt.
+
+Ich möchte diese Gelegenheit nutzten, um auf eine außergewöhnliche Hausmaus zurückzuschauen:
+
+Hildegard P. Maus ist in einem kleinen, gemütlichen Vorratskeller in Bad Mölz geboren und begann ihre Laufbahn als Hausmaus bei der Familie Hartmann, ebenfalls in Bad Mölz. Dort zeigte sie früh, was in ihr steckt: Mit Feingefühl und einem scharfen Verstand unterstützte sie die Familie in schwierigen Zeiten und bewahrte sie sogar schon als Jungmaus vor einem existenzbedrohenden Wasserschaden.
+
+2013, im Jahr des berüchtigten Schwimmskandals, bewies Hildegard einmal mehr, was eine echte Hausmaus ausmacht. Während andere in Schockstarre verfielen, behielt sie einen kühlen Kopf und war maßgeblich an der Wiederherstellung der Integrität unseres Verbandes beteiligt. Sie war es, die das Krisenmanagement leitete, Transparenz schuf und dafür sorgte, dass wir heute stärker denn je dastehen.
+
+Ihre Karriere ist von vielen weiteren beeindruckenden Erfolgen geprägt:
+	•	Als erste stellvertretende Vorsitzende setzte sie sich dafür ein, dass unsere älteren Hausmäuse Zugang zu besseren Unterstützungsstrukturen erhalten.
+	•	Sie initiierte das Programm „Nagehilfe jetzt“, das bis heute unzähligen Familienhausmäusen die Ausbildung erleichtert.
+	•	Ihre Fähigkeit, Konflikte zu entschärfen, wurde mehrfach in herausfordernden Situationen bewiesen – immer mit dem Ziel, den Verband und unsere Mission zu stärken.
+
+Hildegards Loyalität und Arbeitsmoral sind beispielhaft. Sie ist eine Inspiration für uns alle und zeigt, wie viel Gutes eine Hausmaus bewirken kann.
+
+Lasst uns Hildegard an dieser Stelle unseren Dank aussprechen und sie weiterhin in ihrer wichtigen Rolle unterstützen. Gemeinsam können wir auf eine noch stärkere Zukunft für den Verband hinarbeiten.
+
+Mit herzlichen Grüßen,
+Erwin Hubertus
+Leiter des Verbandes Deutscher Hausmäuse e.V.`,
 				},
 			],
 		),
