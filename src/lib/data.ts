@@ -33,7 +33,7 @@ type Data =
 
 const splitAndClean = (input: string): string[] =>
 	input
-		.replace(/[^\w\s]/g, '')
+		.replace(/[^\wäöüÄÖÜß\s]/g, '')
 		.split(/\s+/)
 		.filter(word => word.length > 0)
 
@@ -78,6 +78,16 @@ export const data: Array<Data> = seededShuffle(
 			filetype: 'png' as const,
 		},
 		{
+			type: 'document' as const,
+			// spellchecker: ignore pmmmpob43
+			id: 'pmmmphob43',
+			datetime: new Date('2024-12-05 08:23:00'),
+			name: 'Observation P. Maus',
+			keywords: ['petra', 'monica'],
+			priority: 100,
+			filetype: 'png' as const,
+		},
+		{
 			type: 'audio' as const,
 			// spellchecker: ignore pmmmhmw12
 			id: 'pmmmhmw12',
@@ -103,7 +113,7 @@ Ich hab da eine Idee. Eine, die sie endgültig aus dem Spiel nimmt.
 Was meinst du—
 
 Nicht hier, nicht jetzt. Ich sage dir Bescheid, wenn es soweit ist.`),
-			priority: 50,
+			priority: 100,
 		},
 		{
 			type: 'audio' as const,
@@ -113,7 +123,7 @@ Nicht hier, nicht jetzt. Ich sage dir Bescheid, wenn es soweit ist.`),
 			datetime: new Date('2024-12-20 21:01:00'),
 			name: 'Observation H. Maus',
 			keywords: splitAndClean('Alter Freund... hör zu, ich kann nicht lange reden. Ich hinterlasse dir eine Nachricht am Haus meiner ersten Menschenfamilie. Ja, mir geht es gut. Mach dir keine Sorgen. Wir hören uns. Hildegard'),
-			priority: 50,
+			priority: 120,
 		},
 		{
 			type: 'document' as const,
@@ -297,7 +307,7 @@ Verband Deutscher Hausmäuse e.V.`,
 				id: 'hmvdhehm55',
 				datetime: new Date('2024-12-02 04:58:59'),
 				name: 'Telekommunikationsüberwachung H. Maus',
-				priority: 100,
+				priority: 80,
 			},
 			[
 				{
@@ -396,7 +406,7 @@ Hotel Mäuseblick Nürnberg`,
 				id: 'ptsush04',
 				datetime: new Date('2024-12-15 07:04:58'),
 				name: 'Telekommunikationsüberwachung H. Maus',
-				priority: 0,
+				priority: -50,
 			},
 			[
 				{
