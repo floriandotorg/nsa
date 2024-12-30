@@ -11,7 +11,9 @@ const validAnswer = 'flamingo'
 // spellchecker: ignore geliebtehilde
 const validPassword = 'geliebtehilde'
 
-const login = () => {
+const login = (event: Event) => {
+	event.preventDefault()
+
 	if (username === validUsername && password === validPassword) {
 		return goto('/db')
 	}
@@ -27,7 +29,9 @@ const passwordForget = (event: Event) => {
 	errorMessage = ''
 }
 
-const checkSecurityAnswer = () => {
+const checkSecurityAnswer = (event: Event) => {
+	event.preventDefault()
+
 	if (securityAnswer.toLowerCase() === validAnswer) {
 		mode = 'showPassword'
 		errorMessage = ''
@@ -79,7 +83,8 @@ const checkSecurityAnswer = () => {
 
     {#if mode === 'forgotPassword'}
       <h2 class="mt-6 text-center text-3xl font-extrabold">Passwort vergessen?</h2>
-      <form class="mt-8" onsubmit={() => {
+      <form class="mt-8" onsubmit={(event) => {
+        event.preventDefault()
         if (username === validUsername) {
           mode = 'securityQuestion'
           errorMessage = ''
