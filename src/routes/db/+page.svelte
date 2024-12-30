@@ -10,21 +10,33 @@ let loading = $state(false)
 let errorMessage = $state('')
 
 const searchDatabase = async () => {
-	if (inputValue.length < 5) {
+	const searchTerm = inputValue.toLowerCase().trim()
+	if (searchTerm.length < 5) {
 		errorMessage = 'Bitte geben Sie mindestens 5 Zeichen ein.'
 		results = []
 		return
 	}
+	if (searchTerm.includes(' ')) {
+		errorMessage = 'Bitte geben Sie keine Leerzeichen ein.'
+		results = []
+		return
+	}
+	results = []
 	errorMessage = ''
 	loading = true
-	if (window.location.hostname !== 'localhost') {
-		await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
+	try {
+		if (window.location.hostname !== 'localhost') {
+			await new Promise(resolve => setTimeout(resolve, Math.floor(Math.random() * 3000) + 2000))
+		}
+		results = data.filter(item => item.keywords.includes(searchTerm)).sort((a, b) => b.priority - a.priority)
+		if (!results.length) {
+			errorMessage = 'Es konnten keine Ergebnisse gefunden werden.'
+		}
+	} catch (error) {
+		errorMessage = 'Es ist ein Fehler aufgetreten.'
+	} finally {
+		loading = false
 	}
-	results = data.filter(item => item.keywords.includes(inputValue.toLowerCase())).sort((a, b) => b.priority - a.priority)
-	if (!results.length) {
-		errorMessage = 'Es konnten keine Ergebnisse gefunden werden.'
-	}
-	loading = false
 }
 
 const typeToIcon: {
@@ -51,7 +63,7 @@ const typeToText: {
   
   <div class="flex flex-col items-center justify-center mt-16 px-4">
     <div class="max-w-3xl text-center mb-12">
-      <h1 class="text-4xl font-bold mb-4">Datenbank der Nagerische Sicherheitsagentur</h1>
+      <h1 class="text-4xl font-bold mb-4">Datenbank der Nagerischen Sicherheitsagentur</h1>
       <p class="text-lg text-foreground">
         Durchsuchen Sie unsere umfassende Datenbank nach Personen von Interesse, Aktivitäten und Verbindungen. 
         Unser fortschrittliches System ermöglicht präzise Abfragen in Echtzeit.<br>
