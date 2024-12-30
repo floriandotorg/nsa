@@ -79,6 +79,26 @@ export const data: Array<Data> = seededShuffle(
 		},
 		{
 			type: 'document' as const,
+			// spellchecker: ignore harpho588
+			id: 'harpho588',
+			datetime: new Date('2024-12-21 4:01:00'),
+			name: 'Notiz Familie Hartmann',
+			keywords: ['hartmann'],
+			priority: 0,
+			filetype: 'png' as const,
+		},
+		{
+			type: 'document' as const,
+			// spellchecker: ignore wihmk33
+			id: 'wihmk33',
+			datetime: new Date('2024-06-02 14:22:58'),
+			name: 'Notiz Kühlschrank',
+			keywords: ['kühlschrank', 'mausdorf', 'mägyptisch', 'notiz'],
+			priority: -50,
+			filetype: 'png' as const,
+		},
+		{
+			type: 'document' as const,
 			// spellchecker: ignore pmmmpob43
 			id: 'pmmmphob43',
 			datetime: new Date('2024-12-05 08:23:00'),
@@ -123,7 +143,7 @@ Nicht hier, nicht jetzt. Ich sage dir Bescheid, wenn es soweit ist.`),
 			datetime: new Date('2024-12-20 21:01:00'),
 			name: 'Observation H. Maus',
 			keywords: splitAndClean('Alter Freund... hör zu, ich kann nicht lange reden. Ich hinterlasse dir eine Nachricht am Haus meiner ersten Menschenfamilie. Ja, mir geht es gut. Mach dir keine Sorgen. Wir hören uns. Hildegard'),
-			priority: 120,
+			priority: 200,
 		},
 		{
 			type: 'document' as const,
@@ -271,7 +291,7 @@ Verband Deutscher Hausmäuse e.V.`,
 				id: 'hmvdhnsaa',
 				datetime: new Date('2024-01-15 08:44:00'),
 				name: 'Telekommunikationsüberwachung H. Maus',
-				priority: 100,
+				priority: 200,
 			},
 			[
 				{
@@ -307,7 +327,7 @@ Verband Deutscher Hausmäuse e.V.`,
 				id: 'hmvdhehm55',
 				datetime: new Date('2024-12-02 04:58:59'),
 				name: 'Telekommunikationsüberwachung H. Maus',
-				priority: 80,
+				priority: 220,
 			},
 			[
 				{
@@ -374,7 +394,7 @@ Comando Familiar de Lagartijas`,
 				id: 'hmhotl22',
 				datetime: new Date('2024-12-20 07:34:58'),
 				name: 'Telekommunikationsüberwachung H. Maus',
-				priority: 1,
+				priority: 150,
 			},
 			[
 				{
@@ -465,6 +485,28 @@ Lasst uns Hildegard an dieser Stelle unseren Dank aussprechen und sie weiterhin 
 Mit herzlichen Grüßen,
 Erwin Hubertus
 Leiter des Verbandes Deutscher Hausmäuse e.V.`,
+				},
+			],
+		),
+		threadToEmail(
+			{
+				// spellchecker: ignore smnkm84
+				id: 'smnkm84',
+				datetime: new Date('2024-06-02 14:22:58'),
+				name: 'Telekommunikationsüberwachung S. Maus',
+				priority: 0,
+			},
+			[
+				{
+					sender: 'sebastian.maus@vdh.de',
+					recipients: ['Verteiler Hausmäuse <Verband Deutscher Hausmäuse e.V.>'],
+					subject: 'Spaßvogel',
+					body: `Sehr lustig, die Notiz am Kühlschrank in „Mägyptisch“ war ja wohl der Brüller. Und nein, wir sind nicht dick.
+
+Beste Grüße,
+Sebastian Maus
+Administrator
+Verband Deutscher Hausmäuse e.V.`,
 				},
 			],
 		),
