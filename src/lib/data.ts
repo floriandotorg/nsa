@@ -589,6 +589,43 @@ Verband Deutscher Hausmäuse e.V.`,
 		),
 		threadToEmail(
 			{
+				// spellchecker: ignore hmnvas11
+				id: 'hmnvas11',
+				datetime: new Date('2024-6-10 15:38:58'),
+				name: 'Telekommunikationsüberwachung H. Maus',
+				priority: -50,
+			},
+			[
+				{
+					sender: 'hildegard.maus@vdh.de',
+					recipients: ['Verteiler <Verband Deutscher Hausmäuse e.V.>'],
+					subject: 'Unterstützung der Kontrollmäuse',
+					body: `Liebe Hausmäuse,
+
+ich möchte noch einmal darauf hinweisen, dass jeglicher Versuch, die Arbeit der Kontrollmäuse zu stören, sie zu verwirren, abzuhängen oder anderweitig in ihrer Arbeit zu behindern, strikt untersagt ist. Solche Handlungen werden ohne Ausnahme mit sofortiger Disqualifikation aus der Wahl zur „Hausmaus des Jahres“, vorübergehender Suspendierung oder sogar einem vollständigen Ausschluss aus dem Verband Deutscher Hausmäuse e.V. geahndet.
+
+Insbesondere möchte ich darauf hinweisen, dass der Besitz oder Gebrauch des Geräts "Nagerveilchen" – einem bekannt gewordenen Mittel zur Umgehung der Kontrollmaßnahmen – ebenfalls zu den oben genannten Konsequenzen führt. Solche Geräte oder ähnliche Mittel stehen im direkten Widerspruch zu unseren Werten und Zielen und werden unter keinen Umständen toleriert.
+
+Die Kontrollmäuse haben eine wichtige Aufgabe:
+	•	Sie überprüfen, ob die betreuten Familien zufrieden sind und ob ihre Bedürfnisse erfüllt werden.
+	•	Sie sorgen dafür, dass alle Maßnahmen der Hausmäuse fair und im Einklang mit unseren ethischen Standards ablaufen.
+	•	Sie tragen dazu bei, das Vertrauen in unsere Arbeit zu stärken und die Integrität unseres Verbandes zu sichern.
+
+Wir alle arbeiten gemeinsam daran, den Verband Deutscher Hausmäuse e.V. als zuverlässigen und integren Helfer für Familien in Deutschland zu erhalten. Transparenz und Fairness sind Grundpfeiler unserer Arbeit, und die Kontrollmäuse spielen eine entscheidende Rolle, um dies sicherzustellen.
+
+Ich bitte euch daher eindringlich, die Kontrollmäuse bei ihrer Arbeit zu unterstützen und ihnen mit Respekt zu begegnen. Lasst uns gemeinsam zeigen, dass wir als Gemeinschaft für das Wohl unserer Familien und für die Werte des Verbandes einstehen.
+
+Solltet ihr Fragen oder Bedenken haben, zögert nicht, euch an unser Büro zu wenden.
+
+Mit besten nagerischen Grüßen,
+Hildegard Maus
+Stellvertretende Vorsitzende
+Verband Deutscher Hausmäuse e.V.`,
+				},
+			],
+		),
+		threadToEmail(
+			{
 				// spellchecker: ignore fmmnkm84
 				id: 'fmmnkm84',
 				datetime: new Date('2024-03-26 10:18:58'),
@@ -603,6 +640,31 @@ Verband Deutscher Hausmäuse e.V.`,
 					body: `Also ehrlich, Jungs, ihr glaubt doch nicht im Ernst, dass es in dem Film um echte Maulwürfe geht, oder? Was kommt als Nächstes? Ein Oscar für den besten Tunnelbau?!
 
 Maulwurf heißt Verräter, ihr Genies.`,
+				},
+			],
+		),
+		threadToEmail(
+			{
+				// spellchecker: ignore fmmnkm84
+				id: 'fmmnkm84',
+				datetime: new Date('2024-03-26 10:18:58'),
+				name: 'Telekommunikationsüberwachung E. Maus',
+				priority: -50,
+			},
+			[
+				{
+					sender: 'erwin.hubertus.maus@vdh.de',
+					recipients: ['konrad.maus@nsa.vdh.de', 'hildegard.maus@vdh.de'],
+					subject: 'Das kann doch wohl nicht euer Ernst sein!',
+					body: `Hallo zusammen,
+
+Es ist absolut UNAKZEPTABEL, dass ihr immer noch keine Lösung für dieses blöde Nagerveilchen habt! Gespräche werden gestört, und was macht ihr? Packt die einfach als „unverständlich“ in eure Datenbank?! Das ist kein Umgang mit so einem ernsten Problem!
+
+Und dann noch dieser völlig absurde Zustand, dass wir Funktionäre KEINEN Zugriff auf eure Datenbank haben. Gewaltenteilung hin oder her, das geht doch viel zu weit! Wie sollen wir vernünftig arbeiten, wenn wir völlig im Dunkeln gelassen werden? Das ist einfach nicht tragbar, und ich sage euch: So bleibt das nicht.
+
+Ihr müsst echt mal anfangen, eure Arbeit ernst zu nehmen und diese Probleme sofort zu lösen. Ich habe langsam die Nase voll!
+
+Erwin Hubertus`,
 				},
 			],
 		),
