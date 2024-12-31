@@ -3,6 +3,7 @@ import { Mail, FileAudio, FileText } from 'lucide-svelte'
 import { data } from '$lib/data'
 import Popup from './Popup.svelte'
 import { isRead, markAsRead } from '$lib/read.svelte'
+import { STOP_WORDS } from '$lib/stopwords'
 
 let inputValue = $state('')
 let results = $state<typeof data>([])
@@ -18,6 +19,11 @@ const searchDatabase = async () => {
 	}
 	if (searchTerm.includes(' ')) {
 		errorMessage = 'Bitte geben Sie keine Leerzeichen ein.'
+		results = []
+		return
+	}
+	if (STOP_WORDS.includes(searchTerm)) {
+		errorMessage = 'Ungültiger Suchbegriff.'
 		results = []
 		return
 	}
