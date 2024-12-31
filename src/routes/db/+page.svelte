@@ -22,7 +22,7 @@ const searchDatabase = async () => {
 		results = []
 		return
 	}
-	if (STOP_WORDS.includes(searchTerm)) {
+	if (STOP_WORDS.has(searchTerm)) {
 		errorMessage = 'Ungültiger Suchbegriff.'
 		results = []
 		return

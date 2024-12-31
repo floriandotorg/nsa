@@ -1,4 +1,4 @@
-export const STOP_WORDS = [
+export const STOP_WORDS = new Set([
 	'a',
 	'ab',
 	'aber',
@@ -619,4 +619,4 @@ export const STOP_WORDS = [
 	'über',
 	'überhaupt',
 	'übrigens',
-]
+])
