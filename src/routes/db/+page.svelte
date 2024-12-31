@@ -71,9 +71,7 @@ const typeToText: {
     <div class="max-w-3xl text-center mb-12">
       <h1 class="text-4xl font-bold mb-4">Datenbank der Nagerischen Sicherheitsagentur</h1>
       <p class="text-lg text-foreground">
-        Durchsuchen Sie unsere umfassende Datenbank nach Personen von Interesse, Aktivitäten und Verbindungen. 
-        Unser fortschrittliches System ermöglicht präzise Abfragen in Echtzeit.<br>
-        <strong class="font-medium">Nur für den Dienstgebrauch.</strong>
+        Sie können mithilfe von Stichwörtern Personen, Gegenstände, Namen, Orte, Ereignisse und viele weitere Kategorien durchsuchen. <strong class="font-medium">Nur für den Dienstgebrauch.</strong>
       </p>
     </div>
 
