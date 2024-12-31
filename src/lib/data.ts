@@ -119,6 +119,21 @@ export const data: Array<Data> = seededShuffle(
 		},
 		{
 			type: 'document' as const,
+			// spellchecker: ignore ehbhmmint44
+			id: 'ehbhmmint44',
+			datetime: new Date('2024-09-09 10:00:00'),
+			name: 'Artikel "Hausmaus aktuell"',
+			keywords: splitAndClean(`Wie reagieren Sie auf die  Kritik, dass der Verband in den letzten Jahren an Transparenz verloren hat?
+Erwin Hubertus: Transparenz ist ein zentrales Thema, das wir sehr ernst nehmen. Nach den Vorfällen von 2023 war klar, dass wir Maßnahmen ergreifen mussten, um das Vertrauen in unsere Arbeit zurückzugewinnen. Die Einführung der Kontrollmäuse war ein erster Schritt in die richtige Richtung. Aber, seien wir ehrlich, Transparenz allein löst nicht alle Probleme. Es geht darum, Ergebnisse zu liefern, und manchmal erfordert das eben Entscheidungen, die nicht jedem sofort offenliegen. Wie stellen Sie sich die Zukunft des Verbandes vor?
+Erwin Hubertus:  Mein Ziel ist ein Verband, der effizienter und entschlossener handelt, um Familien die Hilfe zu geben, die sie wirklich brauchen. Mein großes Vorbild ist General Lagarto, der in Spanien mit klarem Kopf und einer starken Hand dafür gesorgt hat, dass Familienhelfer schnell und unbürokratisch agieren können. Natürlich, ich bin ein Befürworter demokratischer Prinzipien – sie haben ihren Platz –, aber ich frage mich, ob diese Prinzipien in jedem Fall der beste Weg sind, um schnell und zielgerichtet zu helfen. Es gibt Momente, in denen Entscheidungen nicht durch langwierige Abstimmungsprozesse ausgebremst werden dürfen. "Ein großes Vorbild für mich ist General Lagarto Bedeutet das, dass Sie demokratische Strukturen im Verband abbauen möchten?
+Erwin Hubertus: (lächelt) Ich glaube, wir sollten nicht in Begriffen wie “Abbau” oder “Einschränkung” denken. Vielmehr geht es darum, die Strukturen zu überdenken und anzupassen, damit wir effektiver werden. Demokratie ist eine wunderbare Sache, aber sie ist kein Selbstzweck. Im Fokus steht immer, wie wir unseren Familien am besten dienen können. Wenn das bedeutet, gewisse Abläufe zu straffen oder zu vereinfachen, dann sollten wir den Mut haben, darüber nachzudenken. Was tun Sie, um nach einem langen Arbeitstag zu entspannen?
+Erwin Hubertus:  Oh, das ist eine gute Frage! Also, ich gönne mir hin und wieder den Spaß, an exklusiven Käse-Auktionen teilzunehmen. Dort werden besondere und extrem seltene Käsesorten versteigert – ich spreche von Sorten, die nur in winzigen Mengen hergestellt werden [Fortsetzung nächste Seite]"
+`),
+			priority: -50,
+			filetype: 'pdf' as const,
+		},
+		{
+			type: 'document' as const,
 			// spellchecker: ignore vptmaa34
 			id: 'vptmaa34',
 			datetime: new Date('2024-12-21 20:43:58'),
