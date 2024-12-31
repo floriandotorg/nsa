@@ -89,6 +89,41 @@ export const data: Array<Data> = seededShuffle(
 		},
 		{
 			type: 'document' as const,
+			// spellchecker: ignore hmamsel77
+			id: 'hmamsel77',
+			datetime: new Date('2024-07-21 14:32:00'),
+			name: 'Photo A. Maus',
+			keywords: ['hildegard', 'arnold'],
+			priority: -100,
+			filetype: 'png' as const,
+		},
+		{
+			type: 'document' as const,
+			// spellchecker: ignore arlnha13
+			id: 'arlnha13',
+			datetime: new Date('2024-02-06 10:00:00'),
+			name: 'Artikel "Hausmaus aktuell"',
+			keywords:
+				splitAndClean(`Arnold Maus: Vom Schuldenberg zum Chefbuchhalter ein portrait VON LENA MAUS Arnold Maus ist der lebende Beweis dafür, dass aus den tiefsten Tälern des Lebens die höchsten Gipfel erklommen werden können. Geboren in eine Familie, die von finanziellen Sorgen geplagt war, lernte Arnold früh, was es bedeutet, sich durchzukämpfen. Seine Eltern, einfache Vorratssammler, verloren durch eine unglückliche Investition in ranzigen Käse ihr gesamtes Hab und Gut. Arnold war damals noch jung, doch dieses Erlebnis prägte ihn zutiefst.
+
+Anstatt zu verzweifeln, nutzte er die Notlage als Antrieb. Mit einem nahezu magischen Talent für Zahlen und einer unerschütterlichen Disziplin begann er, sich Stück für Stück aus dem Schuldenberg der Familie zu arbeiten. Arnold nahm jeden Auftrag an. Sein Ziel war klar: nie wieder würde seine Familie unter der Last finanzieller Unsicherheit leiden müssen
+
+Heute steht Arnold Maus an der Spitze der Finanzverwaltung des Verbands Deutscher Hausmäuse e.V.  Als Chefbuchhalter `),
+			priority: -100,
+			filetype: 'pdf' as const,
+		},
+		{
+			type: 'document' as const,
+			// spellchecker: ignore spmfp93
+			id: 'spmfp93',
+			datetime: new Date('2024-12-21 4:01:00'),
+			name: 'Vermisstenmeldung',
+			keywords: ['spürmaus', 'spürmäuse', 'agent'],
+			priority: 0,
+			filetype: 'pdf' as const,
+		},
+		{
+			type: 'document' as const,
 			// spellchecker: ignore wihmk33
 			id: 'wihmk33',
 			datetime: new Date('2024-06-02 14:22:58'),
@@ -183,7 +218,7 @@ Agent 1: [an Agent 2 gewandt] Wir müssen das unverzüglich an Herrn Melodie wei
 			id: 'pkehmlm533',
 			durationSeconds: 93,
 			datetime: new Date('2024-12-20 07:11:00'),
-			name: 'PK E.Maus',
+			name: 'PK Hausmauswahl 2024',
 			keywords: splitAndClean(`Ruhe bitte, meine Damen und Herren. Danke. Guten Abend. Ich bin Erwin Hubertus, der Leiter des Verbands Deutscher Hausmäuse e.V.
 
 Ich habe heute eine bedauerliche Mitteilung zu machen. Es fällt mir nicht leicht, das zu sagen, aber ich muss die Gerüchte bestätigen: Hildegard Maus ist leider ernsthaft erkrankt.
@@ -680,6 +715,36 @@ Und dann noch dieser völlig absurde Zustand, dass wir Funktionäre KEINEN Zugri
 Ihr müsst echt mal anfangen, eure Arbeit ernst zu nehmen und diese Probleme sofort zu lösen. Ich habe langsam die Nase voll!
 
 Erwin Hubertus`,
+				},
+			],
+		),
+		threadToEmail(
+			{
+				// spellchecker: ignore esehmrn77
+				id: 'esehmrn77',
+				datetime: new Date('2024-6-10 15:38:58'),
+				name: 'Telekommunikationsüberwachung H. Maus',
+				priority: -160,
+			},
+			[
+				{
+					sender: 'hildegard.maus@vdh.de',
+					recipients: ['Verteiler <Verband Deutscher Hausmäuse e.V.>'],
+					subject: 'Eine schwere Entscheidung',
+					body: `Liebe Kolleginnen und Kollegen,
+
+heute wende ich mich mit einer Nachricht an euch, die mir unbeschreiblich schwerfällt. Arnold Maus, unser geschätzter Chefbuchhalter und für mich persönlich ein enger Freund, wird mit sofortiger Wirkung aus dem Verband Deutscher Hausmäuse e.V. ausgeschlossen und all seiner Aufgaben entbunden.
+
+Dieser Schritt bricht mir das Herz. Arnold war nicht nur eine unentbehrliche Stütze des Verbandes, sondern auch jemand, den ich zutiefst bewundert und geschätzt habe. Er war ein Vertrauter, ein Zuhörer, ein Wegbegleiter in schweren Zeiten. Umso unerträglicher ist es für mich, euch mitteilen zu müssen, dass er das Vertrauen, das wir ihm entgegengebracht haben, auf schändliche Weise missbraucht hat.
+
+Nach intensiven Gesprächen mit Erwin Hubertus Maus und reiflicher Überlegung blieb mir keine andere Wahl. So sehr ich es mir gewünscht hätte, diese Entscheidung nicht treffen zu müssen, so klar war am Ende, dass die Integrität und die Werte unseres Verbandes an erster Stelle stehen müssen.
+
+Ich bitte um Verständnis, dass ich aus Rücksicht auf die Umstände keine weiteren Details nennen kann. Es ist eine schmerzhafte Zeit für uns alle, aber ich hoffe, dass wir gemeinsam die Stärke finden, diesen Verlust zu verkraften und den Verband in seinem Kern zu schützen.
+
+Mit traurigen Grüßen,
+Hildegard Maus
+Stellvertretende Vorsitzende
+Verband Deutscher Hausmäuse e.V.`,
 				},
 			],
 		),

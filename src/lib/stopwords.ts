@@ -619,4 +619,5 @@ export const STOP_WORDS = new Set([
 	'über',
 	'überhaupt',
 	'übrigens',
+	'maus',
 ])
