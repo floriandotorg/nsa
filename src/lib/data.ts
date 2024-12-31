@@ -99,6 +99,16 @@ export const data: Array<Data> = seededShuffle(
 		},
 		{
 			type: 'document' as const,
+			// spellchecker: ignore p307
+			id: 'p307',
+			datetime: new Date('2024-12-31 00:32:00'),
+			name: 'Observation R. Maus',
+			keywords: ['riebe', 'golf', 'mulmshorn'],
+			priority: 100,
+			filetype: 'png' as const,
+		},
+		{
+			type: 'document' as const,
 			// spellchecker: ignore arlnha13
 			id: 'arlnha13',
 			datetime: new Date('2024-02-06 10:00:00'),
@@ -153,6 +163,16 @@ Heute steht Arnold Maus an der Spitze der Finanzverwaltung des Verbands Deutsche
 			filetype: 'pdf' as const,
 		},
 		{
+			type: 'audio' as const,
+			// spellchecker: ignore hmamcaf56
+			id: 'hmamcaf56',
+			durationSeconds: 102,
+			datetime: new Date('2023-12-22 09:18:00'),
+			name: 'Tondokument (unverständlich)',
+			keywords: ['unverständlich'],
+			priority: 100,
+		},
+		{
 			type: 'document' as const,
 			// spellchecker: ignore ehbhmmint44
 			id: 'ehbhmmint44',
@@ -180,35 +200,35 @@ Uhrzeit: 20:43
 
 [Protokollbeginn]
 T.Maus: „Was soll das hier? Warum halten Sie mich fest? Ich habe nichts gemacht! Lassen Sie mich sofort gehen!“
-Agent 1: „Beruhigen Sie sich, Herr Maus. Wir wollen Ihnen keine Probleme machen. Wir haben nur ein paar Fragen.“
+Spürmaus 1: „Beruhigen Sie sich, Herr Maus. Wir wollen Ihnen keine Probleme machen. Wir haben nur ein paar Fragen.“
 T.Maus: „Fragen? Fragen über was? Das hier ist illegal! Ich werde meine Anwälte einschalten!“
-Agent 2: „Illegal? Wollen Sie wirklich über illegal reden, Herr Maus?“ [schlägt mit der Faust auf den Tisch] „Wir könnten dieses Hotel auf den Kopf stellen. Buchhaltungsprüfungen, Steuerverstöße, Sicherheitsmängel – glauben Sie mir, wir finden immer etwas.“
-Agent 1: „Bitte, Kollege. Das ist doch nicht nötig. Herr Maus, hören Sie. Ich bin hier, um Ihnen zu helfen. Aber dazu brauchen wir Ihre Kooperation. Sonst… kann ich nichts für Sie tun.“
+Spürmaus 2: „Illegal? Wollen Sie wirklich über illegal reden, Herr Maus?“ [schlägt mit der Faust auf den Tisch] „Wir könnten dieses Hotel auf den Kopf stellen. Buchhaltungsprüfungen, Steuerverstöße, Sicherheitsmängel – glauben Sie mir, wir finden immer etwas.“
+Spürmaus 1: „Bitte, Kollege. Das ist doch nicht nötig. Herr Maus, hören Sie. Ich bin hier, um Ihnen zu helfen. Aber dazu brauchen wir Ihre Kooperation. Sonst… kann ich nichts für Sie tun.“
 T.Maus: „Kooperation? Das ist absurd! Ich habe Ihnen nichts zu sagen!“
-Agent 1: „Herr Maus, haben Sie in letzter Zeit auffällige Gäste bemerkt?“
+Spürmaus 1: „Herr Maus, haben Sie in letzter Zeit auffällige Gäste bemerkt?“
 T.Maus: „Auffällige Gäste? Das hier ist ein Hotel! Jeder Gast ist ein bisschen auffällig.“
-Agent 2: „Das reicht jetzt! Sie spielen mit uns, Herr Maus. Das wird Ihnen nicht helfen. Geben Sie uns etwas – jetzt!“
+Spürmaus 2: „Das reicht jetzt! Sie spielen mit uns, Herr Maus. Das wird Ihnen nicht helfen. Geben Sie uns etwas – jetzt!“
 T.Maus: „Ich habe keine Ahnung, wovon Sie reden! Lassen Sie mich einfach in Ruhe!“
-Agent 1: „Thomas, hören Sie. Ich versuche, Sie aus dieser Situation herauszuholen. Aber Sie müssen mir etwas geben. Irgendetwas. Sonst kann ich Sie nicht beschützen.“
+Spürmaus 1: „Thomas, hören Sie. Ich versuche, Sie aus dieser Situation herauszuholen. Aber Sie müssen mir etwas geben. Irgendetwas. Sonst kann ich Sie nicht beschützen.“
 T.Maus: [seufzt hörbar] „Na gut. Was, was wollen Sie wissen?“
-Agent 1: Denken Sie genau nach. War gestern eine ältere Frau hier?
+Spürmaus 1: Denken Sie genau nach. War gestern eine ältere Frau hier?
 T.Maus: [nervös] Äh… ja. Gegen frühen Abend. Eine ältere Frau war an der Bar.
-Agent 2: War sie allein?
+Spürmaus 2: War sie allein?
 T. Maus: Nein, mit einem älteren Mäuserich. Er war ein bisschen… na ja, kräftiger gebaut.
-Agent 1: [nickend] Das ist gut. Haben Sie mitbekommen, worüber sie gesprochen haben?
+Spürmaus 1: [nickend] Das ist gut. Haben Sie mitbekommen, worüber sie gesprochen haben?
 T.Maus: „Ich weiß es nicht genau.“
-Agent 2: „Bullshit! Sie müssen etwas mitbekommen haben. Reden Sie!“
+Spürmaus 2: „Bullshit! Sie müssen etwas mitbekommen haben. Reden Sie!“
 T.Maus: [zitternd] „Ich habe etwas von… Maulwürfen gehört. Ja, es ging irgendwie um Maulwürfe.“
-Agent 2: „Maulwürfe?! Hören Sie auf, uns zu verarschen!“
+Spürmaus 2: „Maulwürfe?! Hören Sie auf, uns zu verarschen!“
 T.Maus: „Ich schwöre, ich habe das gehört! Maulwürfe! Und… ein Gerät. Es ging um ein Gerät. Aber ich weiß nicht, was für eins.“
-Agent 1: „Ein Gerät? Beschreiben Sie es.“
+Spürmaus 1: „Ein Gerät? Beschreiben Sie es.“
 T.Maus: [zitternd] Sie haben es „Nagerveilchen“ genannt.
-Agent 1: Nagerveilchen? Was ist das?
+Spürmaus 1: Nagerveilchen? Was ist das?
 T.Maus: [verzweifelt] Ich weiß es nicht! Es klang wie ein technisches Gerät… oder ein Code… ich habe keine Ahnung, was es ist!
-Agent 1: [leise und bedrohlich] Nagerveilchen, Herr Maus, ist ein Gerät, das speziell dazu entwickelt wurde, die Aufzeichnungen der Kontrollmäuse zu stören. Wenn Sie das wirklich nicht wussten, sollten Sie sich fragen, warum in Ihrem Hotel darüber gesprochen wird.
+Spürmaus 1: [leise und bedrohlich] Nagerveilchen, Herr Maus, ist ein Gerät, das speziell dazu entwickelt wurde, die Aufzeichnungen der Kontrollmäuse zu stören. Wenn Sie das wirklich nicht wussten, sollten Sie sich fragen, warum in Ihrem Hotel darüber gesprochen wird.
 T.Maus: [flüsternd] Ich… ich habe wirklich keine Ahnung…
-Agent 2: Keine Ahnung, ja? Dann bleiben Sie doch hier unten, bis Ihnen etwas einfällt. Wer weiß, vielleicht sind wir morgen zurück – oder vielleicht nie.
-Agent 1: [an Agent 2 gewandt] Wir müssen das unverzüglich an Herrn Melodie weiterleiten.`),
+Spürmaus 2: Keine Ahnung, ja? Dann bleiben Sie doch hier unten, bis Ihnen etwas einfällt. Wer weiß, vielleicht sind wir morgen zurück – oder vielleicht nie.
+Spürmaus 1: [an Spürmaus 2 gewandt] Wir müssen das unverzüglich an Herrn Melodie weiterleiten.`),
 			priority: 0,
 			filetype: 'pdf' as const,
 		},
@@ -233,6 +253,28 @@ Vielen Dank für Ihre Frage, Frau Maus. Die Hausmauswahl wird aufgrund der aktue
 
 Ich danke Ihnen allen für Ihre Aufmerksamkeit. Weitere Fragen bitte schriftlich an unser Büro. Vielen Dank.`),
 			priority: 100,
+		},
+		{
+			type: 'audio' as const,
+			// spellchecker: ignore hmspm233
+			id: 'hmspm233',
+			durationSeconds: 24,
+			datetime: new Date('2024-12-21 20:55:00'),
+			name: 'Telefonat Spürmaus 2',
+			keywords: splitAndClean(`Herr Melodie, hier spricht Spürmaus 2.
+
+Berichten Sie.
+
+Nicht viel. Der Hotelbesitzer weiß kaum etwas, oder er tut zumindest so. Ein paar Stichworte: Maulwürfe und „Nagerveilchen“. Das Protokoll ist bereits auf dem Weg zu Ihnen.
+
+Das ist alles?
+
+Für den Moment, ja.
+
+Weiter dranbleiben. Wir müssen sie finden. Das hat oberste Priorität.
+
+Verstanden.`),
+			priority: -100,
 		},
 		{
 			type: 'audio' as const,
