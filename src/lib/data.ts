@@ -99,6 +99,26 @@ export const data: Array<Data> = seededShuffle(
 		},
 		{
 			type: 'document' as const,
+			// spellchecker: ignore ncke12
+			id: 'ncke12',
+			datetime: new Date('2023-12-22 10:01:00'),
+			name: 'Serviette Käseeck',
+			keywords: ['serviette', 'käseeck'],
+			priority: -100,
+			filetype: 'png' as const,
+		},
+		{
+			type: 'document' as const,
+			// spellchecker: ignore nhmb99
+			id: 'nhmb99',
+			datetime: new Date('2023-12-22 10:01:00'),
+			name: 'Zettel Mäuseblick',
+			keywords: ['zettel', 'mäuseblick'],
+			priority: -100,
+			filetype: 'png' as const,
+		},
+		{
+			type: 'document' as const,
 			// spellchecker: ignore p307
 			id: 'p307',
 			datetime: new Date('2024-12-31 00:32:00'),
@@ -320,7 +340,7 @@ Nicht hier, nicht jetzt. Ich sage dir Bescheid, wenn es soweit ist.`),
 			name: 'Artikel "Mägyptisch"',
 			keywords: splitAndClean(`Die faszinierende Sprache des Mägyptischen
 Eine Reise in die Welt der alten Mäuse
-Das Mägyptische, eine außergewöhnliche Sprache, die von den Mäusen des alten Ägyptens gesprochen wurde, bietet einen einzigartigen Einblick in die Sprachkultur der Antike. Durch die geschickte Verwendung von Symbolen schufen die Mäuse ein hochentwickeltes System der Kommunikation, das später sogar von den Pharaonen übernommen und adaptiert wurde – natürlich in einer stark abgewandelten Form. Was das Mägyptische so besonders macht, ist seine Vielschichtigkeit und die Eleganz, mit der es Kontext und Bedeutung verbindet.
+Das Mägyptische, eine außergewöhnliche Sprache, die von den Mäusen des alten Ägypten gesprochen wurde, bietet einen einzigartigen Einblick in die Sprachkultur der Antike. Durch die geschickte Verwendung von Symbolen schufen die Mäuse ein hochentwickeltes System der Kommunikation, das später sogar von den Pharaonen übernommen und adaptiert wurde – natürlich in einer stark abgewandelten Form. Was das Mägyptische so besonders macht, ist seine Vielschichtigkeit und die Eleganz, mit der es Kontext und Bedeutung verbindet.
 Die Magie der Symbole
 Im Mägyptischen können die Symbole – sogenannte “Hieroglyphen” – bis zu vier unterschiedliche Bedeutungen haben, abhängig vom Kontext:
 Bildliche Bedeutung: Das Zeichen für die Sonne (𓇳) repräsentiert die Sonne als Himmelskörper.
