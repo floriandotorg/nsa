@@ -261,20 +261,18 @@ Ich danke Ihnen allen für Ihre Aufmerksamkeit. Weitere Fragen bitte schriftlich
 			durationSeconds: 24,
 			datetime: new Date('2024-12-21 20:55:00'),
 			name: 'Telefonat Spürmaus 2',
-			keywords: splitAndClean(`Herr Melodie, hier spricht Spürmaus 2.
-
-Berichten Sie.
-
-Nicht viel. Der Hotelbesitzer weiß kaum etwas, oder er tut zumindest so. Ein paar Stichworte: Maulwürfe und „Nagerveilchen“. Das Protokoll ist bereits auf dem Weg zu Ihnen.
-
-Das ist alles?
-
-Für den Moment, ja.
-
-Weiter dranbleiben. Wir müssen sie finden. Das hat oberste Priorität.
-
-Verstanden.`),
+			keywords: ['melodie'],
 			priority: -100,
+		},
+		{
+			type: 'audio' as const,
+			// spellchecker: ignore hmamcaf56432
+			id: 'hmamcaf56432',
+			durationSeconds: 32,
+			datetime: new Date('2023-12-22 10:46:00'),
+			name: 'Telefonat Spürmausteam',
+			keywords: ['melodie'],
+			priority: -101,
 		},
 		{
 			type: 'audio' as const,
